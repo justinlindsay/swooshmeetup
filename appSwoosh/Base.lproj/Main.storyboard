@@ -127,6 +127,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="dpa-Y7-CJn" eventType="touchUpInside" id="3TV-dy-lqv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mz-bw-1vm">
                                         <rect key="frame" x="0.0" y="97" width="335" height="57"/>
@@ -138,6 +141,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="dpa-Y7-CJn" eventType="touchUpInside" id="I0D-i8-95B"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ta-Qd-SKN">
                                         <rect key="frame" x="0.0" y="194" width="335" height="57"/>
@@ -149,10 +155,13 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="dpa-Y7-CJn" eventType="touchUpInside" id="38R-TX-hn4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGN-EO-XVC">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGN-EO-XVC">
                                 <rect key="frame" x="16" y="590" width="343" height="57"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.70023657569999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -216,6 +225,7 @@
                         <viewLayoutGuide key="safeArea" id="JBl-aM-Bhz"/>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="GGN-EO-XVC" id="ifC-Kw-t3X"/>
                         <segue destination="EYF-Lx-KFe" kind="show" identifier="skillVCSegue" id="f8X-yz-Rps"/>
                     </connections>
                 </viewController>
@@ -270,7 +280,7 @@
                                             <constraint firstAttribute="height" constant="57" id="cK2-Mf-kJh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="Mens">
+                                        <state key="normal" title="Beginner">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
@@ -278,7 +288,7 @@
                                         <rect key="frame" x="187.5" y="0.0" width="147.5" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.70023657569999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="Womens">
+                                        <state key="normal" title="Baller">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
@@ -312,6 +322,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9fo-nm-2nE"/>
                     </view>
+                    <connections>
+                        <outlet property="desiredLeagueLbl" destination="PQr-Jt-s1a" id="XwQ-Lc-C7B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Rn-6G-jCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
